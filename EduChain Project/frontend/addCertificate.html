@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Certificate - EduChain</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-inter dark-bg text-gray-100 min-h-screen">
+  <!-- Navigation -->
+  <nav class="dark-nav shadow-lg sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-2xl font-bold text-blue-400">EduChain</span>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a href="index.html" class="border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition duration-150">
+              Home
+            </a>
+            <a href="addCertificate.html" class="border-blue-500 text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              Add Certificate
+            </a>
+            <a href="verifyCertificate.html" class="border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition duration-150">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+        <div class="-mr-2 flex items-center sm:hidden">
+          <button id="menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="sm:hidden hidden">
+      <div class="pt-2 pb-3 space-y-1">
+        <a href="index.html" class="border-transparent text-gray-300 hover:bg-gray-700 hover:border-gray-300 hover:text-gray-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+          Home
+        </a>
+        <a href="addCertificate.html" class="bg-gray-800 border-blue-500 text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+          Add Certificate
+        </a>
+        <a href="verifyCertificate.html" class="border-transparent text-gray-300 hover:bg-gray-700 hover:border-gray-300 hover:text-gray-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+          Verify Certificate
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="py-10">
+    <header>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold leading-tight text-gray-100">Add New Certificate</h1>
+      </div>
+    </header>
+    <main>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="px-4 py-8 sm:px-0">
+          <div class="dark-card overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <div class="max-w-2xl mx-auto">
+                <form id="certificate-form" class="space-y-6">
+                  <div>
+                    <label for="recipient" class="block text-sm font-medium text-gray-300">Recipient Name</label>
+                    <div class="mt-1">
+                      <input type="text" name="recipient" id="recipient" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-600 rounded-md transition duration-150" placeholder="John Doe" required>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300">Recipient Email</label>
+                    <div class="mt-1">
+                      <input type="email" name="email" id="email" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-600 rounded-md transition duration-150" placeholder="john@example.com" required>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="course" class="block text-sm font-medium text-gray-300">Course/Certificate Name</label>
+                    <div class="mt-1">
+                      <input type="text" name="course" id="course" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-600 rounded-md transition duration-150" placeholder="Bachelor of Computer Science" required>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="issuer" class="block text-sm font-medium text-gray-300">Issuing Institution</label>
+                    <div class="mt-1">
+                      <input type="text" name="issuer" id="issuer" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-600 rounded-md transition duration-150" placeholder="University of Technology" required>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="issueDate" class="block text-sm font-medium text-gray-300">Issue Date</label>
+                    <div class="mt-1">
+                      <input type="date" name="issueDate" id="issueDate" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-600 rounded-md transition duration-150" required>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="description" class="block text-sm font-medium text-gray-300">Description/Achievements</label>
+                    <div class="mt-1">
+                      <textarea id="description" name="description" rows="3" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-600 rounded-md transition duration-150" placeholder="Describe the achievements or details about this certificate"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-end">
+                    <button type="submit" class="btn-primary inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md transform transition hover:scale-105">
+                      Add Certificate
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Success message (hidden by default) -->
+                <div id="success-message" class="mt-6 hidden">
+                  <div class="rounded-md success-bg p-4">
+                    <div class="flex">
+                      <div class="flex-shrink-0">
+                        <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-sm font-medium text-green-400">Certificate added successfully</h3>
+                        <div class="mt-2 text-sm text-green-300">
+                          <p>The certificate has been added to the blockchain.</p>
+                          <p class="mt-1">Certificate ID: <span id="certificate-id" class="font-mono"></span></p>
+                        </div>
+                        <div class="mt-4">
+                          <div class="-mx-2 -my-1.5 flex">
+                            <button id="verify-button" type="button" class="bg-green-900 px-2 py-1.5 rounded-md text-sm font-medium text-green-300 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                              Verify this certificate
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="dark-nav">
+    <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <p class="mt-8 text-center text-base text-gray-400">
+        &copy; 2025 EduChain. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/certificateForm.js"></script>
+</body>
+</html>

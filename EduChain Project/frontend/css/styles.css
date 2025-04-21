@@ -1,0 +1,222 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Font family */
+.font-inter {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page transition animations */
+.page-transition {
+  animation: fade-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating image animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating-image {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow effect */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.glow-effect {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Dark theme styles */
+.dark-bg {
+  background-color: #111827;
+}
+
+.dark-nav {
+  background-color: #1F2937;
+  border-bottom: 1px solid #374151;
+}
+
+.dark-card {
+  background-color: #1F2937;
+  border: 1px solid #374151;
+}
+
+.dark-text {
+  color: #F3F4F6;
+}
+
+.dark-text-secondary {
+  color: #9CA3AF;
+}
+
+/* Navigation link styles */
+.nav-link {
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #F3F4F6 !important;
+  border-color: #60A5FA !important;
+}
+
+/* Form elements */
+input, textarea, select {
+  transition: all 0.2s ease;
+  background-color: #1F2937;
+  color: #F3F4F6;
+  border: 1px solid #374151;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #60A5FA;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9CA3AF;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #2563EB;
+  color: #F3F4F6;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1D4ED8;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #374151;
+  color: #F3F4F6;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #4B5563;
+  transform: translateY(-1px);
+}
+
+/* Card hover effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1F2937;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4B5563;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+/* Grid pattern background */
+.pattern-grid {
+  background-image: radial-gradient(rgba(96, 165, 250, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Success and error states */
+.success-bg {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.error-bg {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Form validation styles */
+.input-error {
+  border-color: #EF4444;
+}
+
+.input-success {
+  border-color: #10B981;
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background-color: #1F2937;
+  color: #F3F4F6;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 10;
+}

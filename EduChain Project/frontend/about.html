@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - EduChain</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-inter dark-bg text-gray-100 min-h-screen">
+  <!-- Navigation -->
+  <nav class="dark-nav shadow-lg sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-2xl font-bold text-blue-400">EduChain</span>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a href="index.html" class="border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition duration-150">
+              Home
+            </a>
+            <a href="addCertificate.html" class="border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition duration-150">
+              Add Certificate
+            </a>
+            <a href="verifyCertificate.html" class="border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition duration-150">
+              Verify Certificate
+            </a>
+            <a href="about.html" class="border-blue-500 text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              About
+            </a>
+          </div>
+        </div>
+        <div class="-mr-2 flex items-center sm:hidden">
+          <button id="menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="sm:hidden hidden">
+      <div class="pt-2 pb-3 space-y-1">
+        <a href="index.html" class="border-transparent text-gray-300 hover:bg-gray-700 hover:border-gray-300 hover:text-gray-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+          Home
+        </a>
+        <a href="addCertificate.html" class="border-transparent text-gray-300 hover:bg-gray-700 hover:border-gray-300 hover:text-gray-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+          Add Certificate
+        </a>
+        <a href="verifyCertificate.html" class="border-transparent text-gray-300 hover:bg-gray-700 hover:border-gray-300 hover:text-gray-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+          Verify Certificate
+        </a>
+        <a href="about.html" class="bg-gray-800 border-blue-500 text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+          About
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="py-10">
+    <main>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="px-4 py-8 sm:px-0">
+          <div class="dark-card overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="flex-1 min-w-0">
+                  <div class="relative float-right ml-8 mb-8 lg:ml-16">
+                    <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl floating-image">
+                      <img src="https://placehold.co/400x400/1F2937/FFFFFF?text=AS" alt="Aryan Sharma" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 rounded-full glow-effect"></div>
+                  </div>
+                  <h2 class="text-3xl font-bold leading-7 text-gray-100 sm:text-4xl sm:truncate mb-4">
+                    Aryan Sharma
+                  </h2>
+                  <p class="text-xl text-blue-400 mb-6">
+                    Full-Stack Developer | AI Enthusiast & Computer Science Engineer | Creator & Innovator
+                  </p>
+                  <div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6 mb-8">
+                    <div class="mt-2 flex items-center text-sm text-gray-300">
+                      <span class="mr-2">📧</span>
+                      <a href="mailto:aryan@techynar.com" class="hover:text-blue-400 transition">aryan@techynar.com</a>
+                    </div>
+                  </div>
+                  <div class="prose prose-lg text-gray-300 max-w-none">
+                    <p class="mb-6">
+                      Hi there! 👋 I'm Aryan Sharma, a passionate and driven technology enthusiast pursuing a B.Tech in Computer Science Engineering. I thrive on solving real-world challenges through innovative tech solutions, adapting and evolving with the ever-changing tech landscape. 🚀
+                    </p>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-4">💡 About Me</h3>
+                    <ul class="list-disc list-inside space-y-2 mb-6">
+                      <li>👨‍💻 Technology Enthusiast: I believe in leveraging technology to empower humanity and drive meaningful innovation.</li>
+                      <li>🔗 Mantra: "Do what's needed for the hour, adapt, and innovate."</li>
+                      <li>📱 Innovative Creator: Developing projects that make a difference.</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-8">
+                      <a href="https://www.linkedin.com/in/aryan-sharma-techynar/" target="_blank" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-md hover:scale-105 transition flex items-center">
+                        <span>Connect on LinkedIn</span>
+                      </a>
+                      <a href="https://techynar.com" target="_blank" rel="noopener noreferrer" class="btn-secondary px-4 py-2 rounded-md hover:scale-105 transition flex items-center">
+                        <span>Visit Website</span>
+                      </a>
+                      <a href="https://github.com/techynAR" target="_blank" rel="noopener noreferrer" class="btn-secondary px-4 py-2 rounded-md hover:scale-105 transition flex items-center">
+                        <span>GitHub Profile</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="dark-nav">
+    <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <p class="mt-8 text-center text-base text-gray-400">
+        &copy; 2025 EduChain. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
